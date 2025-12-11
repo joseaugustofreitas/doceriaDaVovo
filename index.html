@@ -1,61 +1,173 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light">
+<html lang="pt-BR">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria da Vovó - Versão Vanilla</title>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doceria da Vovó</title>
-    <link rel="stylesheet" href="./index.css" />
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Ícones (Lucide via unpkg para vanilla) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div id="container">
-        <div id="profile">
-            <img src="./images/avatar-light.png" alt="" />
-            <p>@doceria.vovo</p>
-        </div>
-        <ul>
-            <li>
-                <a href="./historia/historia.html">Conheça nossa História.</a>
-            </li>
-            <li>
-                <a href="./cardapio/cardapio.html">Confira nosso cardápio.</a>
-            </li>
-            <li>
-                <a href="https://wa.me/5535998042287?text=Ola!%20gostaria%20de%20conhecer%20melhor%20os%20produtos%20e%20fazer%20uma%20encomenda."
-                    target="_blank"><ion-icon name="logo-whatsapp"></ion-icon>Entre
-                    em contato.</a>
-            </li>
-        </ul>
-        <div id="social-links">
-            <a href="https://wa.me/5535998042287?text=Ola!%20gostaria%20de%20conhecer%20melhor%20os%20produtos%20e%20fazer%20uma%20encomenda."
-                target="_blank">
-                <ion-icon name="logo-whatsapp"></ion-icon></a>
 
-            <a href="https://www.facebook.com/doceria.vovo/" target="_blank">
-                <ion-icon name="logo-facebook"></ion-icon>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Doceria da Vovó
             </a>
-            <a href="https://www.instagram.com/doceria.vovo" target="_blank">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+            <div class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#doceria-section">A Doceria</a>
+                <a href="#historia">História</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/doceria.vovo" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon> Instagram
+                </a>
+                <a href="https://www.facebook.com/doceria.vovo/" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon> Facebook</a>
+                <a href="https://wa.me/5535998042287?text=Ola!%20gostaria%20de%20conhecer%20melhor%20os%20produtos%20e%20fazer%20uma%20encomenda."
+                    target="_blank">
+                    <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp</a>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <!-- <span class="badge">NOVA IDENTIDADE VISUAL</span> -->
+                <h1>Tradição que <br> <span class="highlight">derrete na boca</span></h1>
+                <p>Apresentamos a nova cara da Doceria da Vovó. Um design que celebra nossas raízes, o amor pelo
+                    artesanal e o sabor inconfundível de casa.
+                    <!-- realizando seu sonho -->
+                </p>
+                <!-- <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg">Ver a Logo</button>
+                    <button class="btn btn-outline btn-lg">Nossa História</button>
+                </div> -->
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="./images/Logo_Doceria_da_Vovo.png" alt="Logo Doceria da Vovó">
+                    <!-- <div class="new-badge">Novo!</div> -->
+                </div>
+                <div class="blur-bg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Showcase -->
+    <section id="doceria-section" class="showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Detalhes Feitos à Mão</h2>
+                <p>Cada produro da nossa doceria é pensado nos detalhes para tranmitir o carinho e a dedicação de
+                    realizarmos o sonho de nossos clientes.
+                    <!-- Cada elemento da nossa nova logo foi pensado para transmitir o carinho e a dedicação que colocamos em
+                    cada receita.</p> -->
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">👵</div>
+                    <h3>A Vovó</h3>
+                    <p>O coração da nossa marca, representando sabedoria, carinho e tradição culinária.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍪</div>
+                    <h3>Ingredientes</h3>
+                    <p>Nossos ingredientes são de alta qualidade, pensando na melhor experiência para nossos clientes.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Cores</h3>
+                    <p>Não medimos esforços para realizar o desejo de nossos clientes, por isso cada detalhe com as
+                        cores faz toda a diferença</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trends Section -->
+    <section id="historia" class="trends">
+        <div class="container">
+            <div class="trends-header">
+                <div class="trends-text">
+                    <h2>A História</h2>
+                    <p>A doceria da vovó começou em 2009 quando a vovó (Elena), fazia seus doces e quitutes para a
+                        família.
+                        </br>
+                        O tempo foi passando e as encomendas aumentaram, então veio a decisão criar-se uma marca, hoje
+                        conhecida como
+                        Doceria da Vovó, o nome bem sugestivo, pois quando sua neta ainda pequena queria aprender os
+                        passos da vó.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para provar?</h2>
+            <p>Nossa cozinha está a todo vapor preparando as delícias que você acabou de ver.</p>
+            <a href="https://wa.me/5535998042287?text=Ola!%20gostaria%20de%20conhecer%20melhor%20os%20produtos%20e%20fazer%20uma%20encomenda."
+                target="_blank"><button class="btn btn-white btn-lg">
+                    Fazer Pedido Agora </button></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div>
-            Feito por
-            <a href="https://www.softwaredevops.com.br" target="_blank">softwaredevops.</a>
+        <div class="container footer-content">
+            <h2 class="logo">Doceria da Vovó</h2>
+            <p>Trazendo o sabor da infância e o carinho de casa para cada doce que preparamos.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/doceria.vovo" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon> Instagram
+                </a>
+                <a href="https://www.facebook.com/doceria.vovo/" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon> Facebook</a>
+                <a href="https://wa.me/5535998042287?text=Ola!%20gostaria%20de%20conhecer%20melhor%20os%20produtos%20e%20fazer%20uma%20encomenda."
+                    target="_blank">
+                    <ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</a>
+            </div>
+            <div class="copyright">
+                <span>Feito com <i data-lucide="heart" class="heart-icon"></i> e pouco açúcar.</span>
+            </div>
+            <div class="tm-copyright-p">
+
+                Copyright &copy; <span class="tm-current-year">2025</span><a href="https://www.softwaredevops.com.br"
+                    target="_blank">softwaredevops.</a></p>
+            </div>
         </div>
+
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
